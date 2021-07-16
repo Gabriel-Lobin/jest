@@ -16,6 +16,9 @@ describe('o retorno do telefonema', () => {
   });
   test('ocupado', () => {
     answerPhone(false)
-      .catch((erro) => expect(erro).toBe('Infelizmente não podemos atender...'));
+      .catch((Error) => {
+       console.log(Error);
+       expect(Error).toBe(Error);
+      });
   });
 });
